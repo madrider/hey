@@ -1,0 +1,48 @@
+/*********************************************************************
+* File			: 3.5.txt
+* Author Name		: Vijai Chandra Prasad
+* Desc			: Program to the number of times the character is found in the word
+* Version		: 1.0
+* Last Modified Date	: 28-7-2017
+* Change Description	: Initial code
+*********************************************************************/
+BEGIN
+	DECLARE word AS STRING
+	DECLARE char AS CHARACTER
+	DECLARE i AS NUMBER
+	DECLARE count AS NUMBER
+	INITIALISE count TO 0
+
+	PROMPT "Enter a word"
+	ACCEPT word FROM USER
+
+	PROMPT "Enter the character"
+	ACCEPT char FROM USER
+
+	FOR i = 0 TO word[i] != 0 
+		count++
+	END FOR
+
+	FOR i = 0 TO i <= count
+		count = match(char,word[i]) 
+	END FOR		
+	PRINT "No of Repeated characters"+COUNT
+END
+
+/*********************************************************************
+* Module Name		: match
+* Input Parameters	: string,string
+* Return Type		: int
+* Author		: Vijai Chandra Prasad
+* Creation Date		: 28-7-2017
+* Description		: count of a character in a word
+*********************************************************************/
+
+SUB match(char,word)
+	DELCARE count AS NUMBER
+	INITIALISE count TO 0
+	IF char==word
+		count++
+	END IF
+	RETURN count
+END SUB

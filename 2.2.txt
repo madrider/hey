@@ -1,0 +1,39 @@
+/**********************************************************************************************
+* File 			:	2.2.txt
+* Author Name 		:	Vijai Chandra Prasad
+* Desc 			:	Program to accept a number and return the sum of its digits.
+* Version 		:	1.0
+* Last Modified Date 	:	29-July-2017
+* Change Description 	:	Initial Code
+***********************************************************************************************/
+
+BEGIN
+	DECLARE num AS INTEGER
+	PROMPT "Enter a number"
+	ACCEPT n FROM USER
+	PRINT "Sum of digits is",sumofdigits(num)
+END
+
+/************************************************************************************************
+ * Module Name		:	sumofdigits()							*
+ * Input Params		:	Number								*
+ * Return Type		:	Number								*
+ * Author Name		:	Vijai Chandra Prasad						*
+ * Description		:	Sub program to calculate sum of digits number			*
+ * last Modified Date	:	27/07/2017							*
+ ************************************************************************************************/ 
+SUB sumofdigits(num)
+	DECLARE TEMP AS INTEGER
+	DECLARE DIGITS AS INTEGER
+	DECLARE SUM AS INTEGER
+	INITIALISE SUM AS 0
+
+	WHILE NUM>0
+		DIGITS = NUM % 10
+		SUM += DIGIT
+		NUM/=10
+
+	END WHILE
+	RETURN SUM
+
+END SUB

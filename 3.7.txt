@@ -1,0 +1,46 @@
+/*********************************************************************
+* File			: 3.6.txt
+* Author Name		: Vijai Chandra Prasad
+* Desc			: Program to find the substring in a string
+* Version		: 1.0
+* Last Modified Date	: 28-7-2017
+* Change Description	: Initial code
+*********************************************************************/
+BEGIN
+	DECLARE word[30],search[30] AS STRING
+	DECLARE cnt1,cnt2,i,j,flag AS NUMBERS
+	
+	PROMPT "Enter the string"
+	ACCEPT word AS STRING FROM USER
+	PROMPT "Enter the substring"
+	ACCEPT search AS STRING FROM USER
+	
+	WHILE word[cnt] != NULL \\i.e., '\0'
+		THEN INCREMENT cnt BY 1
+	
+	WHILE search[cnt1] != NULL \\i.e., '\0'
+		THEN INCREMENT cnt1 BY 1
+	
+	FOR i=0 TO i <= (cnt1 - cnt2)
+		
+		FOR j=i TO j < (i+cnt2)
+			
+			flag = 1
+				
+				IF word[j] != search[j-i]
+					
+					flag = 0	
+					BREAK
+				END IF
+		END FOR
+	IF flag == 1
+		BREAK
+	END IF
+	END FOR
+	
+	IF flag == 1 THEN
+		PRINT "SUCCESSFUL!"
+	ELSE
+		PRINT "NOT SUCCESSFUL!"
+	END IF
+END

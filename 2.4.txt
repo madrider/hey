@@ -1,0 +1,64 @@
+/************************************************************************
+* File			:	2.4.txt                              	*
+* Author Name		:	Vijai Chandra Prasad			*
+* Desc			:	Modification of given pseudocode        *
+* Version		:	1.0				        *
+* Last Modified Date	: 	29-July-2017			        *
+* Change Description	:	Initial					*
+*************************************************************************/
+
+
+BEGIN
+	DECLARE emp AS Employee
+	DECLARE INDEX AS INTEGER	
+	DECLARE leaves, TotalLeaves AS INTEGER
+	//leaves variable is used to store number of leaves per month
+
+	FOR index= 1 to 5
+		PROMPT "Enter the EmployeeId" AND STORE IN
+			emp.EmpId
+		PROMPT "Enter the employmentType" AND STORE IN
+			emp.employmentType
+	END FOR
+
+
+	FOR index= 1 to 5
+		TotalLeaves = check(emp.employmenttype)
+
+	
+
+	PRINT "Employee Id :" + emp.EmpId
+	PRINT "Total Available Leaves are :"+TotalLeaves
+	END FOR
+
+	
+END
+
+// Creation of structure to hold the data.
+
+RECORD Employee
+	DECLARE EmpId as INTEGER
+	DECLARE employmentType AS STRING
+END RECORD
+
+
+/************************************************************************************************
+ * Module Name		:	check()								*
+ * Input Params		:	varchar								*
+ * Return Type		:	Number								*
+ * Author Name		:	Vijai Chandra Prasad						*
+ * Description		:	Sub program to convert binary number to decimal number		*
+ * last Modified Date	:	27/07/2017							*
+ ************************************************************************************************/ 
+SUB check(employment_type)
+	DECLARE leaves, TotalLeaves AS INTEGER
+	
+	IF(employmentType=='PERMANENT') THEN
+		leaves=2;
+		TotalLeaves=leaves*12;
+	ELSE IF(employmentType=='CONTRACT') THEN
+		leaves=1;
+		TotalLeaves=leaves*12;
+	END IF
+	RETURN TotalLeaves
+END SUB

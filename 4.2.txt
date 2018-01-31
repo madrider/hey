@@ -1,0 +1,76 @@
+/*********************************************************************
+* File			: 4.2.txt
+* Author Name		: Vijai Chandra Prasad
+* Desc			: Program to calculate the total leaves with exceptions
+* Version		: 1.0
+* Last Modified Date	: 28-7-2017
+* Change Description	: Initial code
+*********************************************************************/
+BEGIN
+	DECLARE emp AS Employee
+	
+	DECLARE TotalLeaves AS INTEGER
+	
+	DECLARE index AS INTEGER
+
+	FOR index= 1 to 5
+		PROMPT "Enter the EmployeeId" AND ACCEPT emp.EmpId FROM USER
+		PROMPT "Enter the employmentType" AND ACCEPT emp.employmentType FROM USER
+	END FOR
+		
+	FOR index= 1 to 5
+		TotalLeaves = check(emp.employmentType)
+	
+	PRINT "Employee Id :" + emp.EmpId
+	PRINT "Total Available Leaves are :"+ TotalLeaves
+	END FOR
+
+EXCEPTION
+	WHILE emp.EmpIdisNull AND emp.EmpIdisString THEN 
+		PRINT "Enter a valid value"
+	WHILE emp.employmentTypeisNull AND emp.employmentTypeisNumber  THEN
+		PRINT "Enter a valid value"		
+	WHILE emp.employmentTypeisNot'PERMANENT' OR emp.employmentTypeisNot'CONTRACT' THEN
+		PRINT "Enter a valid valiue"
+	
+END
+
+/*********************************************************************
+* Module Name	: Employee
+* Author	: Vijai Chandra Prasad
+* Creation Date : 28-7-2017
+* Description	: creation of structure to hold the employee data 
+*********************************************************************/
+RECORD Employee
+	DECLARE EmpId as INTEGER
+	DECLARE employmentType AS STRING
+END RECORD
+
+
+
+
+/*********************************************************************
+* Module Name		: check
+* Input Parameters	: String
+* Return Type		: int
+* Author		: Vijai Chandra Prasad
+* Creation Date		: 28-7-2017
+* Description		: Subroutine to calculate the total no of leaves for an employee per year 
+*********************************************************************/
+
+SUB check(employmentType)
+		
+		DECLARE leaves, TotalLeaves AS INTEGER
+		
+		IF employmentType == 'PERMANENT' THEN 
+			leaves = 2;
+			TotalLeaves = leaves*12;
+		
+		ELSE IF employmentType == 'CONTRACT' THEN
+			leaves = 1;
+			TotalLeaves = leaves * 12;
+		
+		END IF
+		
+		RETURN TotalLeaves
+END SUB

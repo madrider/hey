@@ -1,0 +1,35 @@
+/*********************************************************************
+* File : 1.3.txt
+* Author Name : Vijai Chandra Prasad
+* Desc : Program to print fibonacci series 
+* Version : 1.0
+* Last Modified Date : 28-July-2017
+* Change Description : Initial code
+*********************************************************************/
+
+BEGIN
+	
+	DECLARE n AS INTEGER
+	DECLARE index AS INTEGER
+	DECLARE first AS INTEGER AND INITALISE AS 0
+	DECLARE second AS INTEGER AND INITALISE AS 1
+	DECLARE next AS INTEGER
+
+	ACCEPT n
+
+	FOR index=0 TO index < n
+		IF index <= 1
+			next = index
+		ELSE
+			next= first+second
+			first=second
+			second=next
+		END IF
+	END FOR
+	PRINT next
+
+END
+	
+
+
+

@@ -1,0 +1,37 @@
+/*********************************************************************
+* File			: 4.3.txt
+* Author Name		: Aniruthya Pradeep Kumar HS
+* Desc			: Modification of given pseudocode
+* Version		: 1.0
+* Last Modified Date	: 28-July-2017
+* Change Description	: Initial
+*********************************************************************/
+
+BEGIN
+	
+	DECLARE PRICE AS INTEGER
+	DECLARE QUANTITY AS INTEGER
+	DECLARE TOTAL_COST AS DECIMAL NUMBER
+	DECLARE TAX_RATE AS DECIMAL AND INITIALISE IT AS .56
+	PRINT "Enter price of your product"
+
+		IF
+			PRICE==0
+			PRINT "Inappropriate Input, Please try again!"
+		ELSE
+        	ACCEPT PRICE
+	
+	PRINT "Enter the quantity of your product"
+		IF
+			QUANTITY==0
+			PRINT "Inappropriate Input, Please try again!"
+		ELSE
+	ACCEPT QUANTITY
+	TOTAL_COST=PRICE*QUANTITY*0.56
+	RETURN TOTAL_COST
+	PRINT "Total price of product is" + TOTAL_COST
+END
+
+
+	
+

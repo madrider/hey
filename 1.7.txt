@@ -1,0 +1,34 @@
+/*********************************************************************
+* File : 1.7.txt
+* Author Name : Vijai Chandra Prasad	
+* Desc : Program to calculate total price of a product including tax
+* Version : 1.0
+* Last Modified Date : 28-7-2017
+* Change Description : Initial code
+*********************************************************************/
+BEGIN
+
+	DECLARE p AS NUMBER
+	PROMPT "Enter price of your product"
+	ACCEPT p FROM USER
+	PRINT "Total price of product is " + tp(p)
+END
+/*********************************************************************
+* Module Name : SubProgram to calculate total price of a product including tax
+* Input Parameters : int
+* Return Type : int
+* Author : Vijai Chandra Prasad
+* Creation Date : 28-7-2017
+* Description : Calculate total price
+*********************************************************************/
+
+
+SUB tp(p)
+	DECLARE tc AS NUMBER
+	DELCLARE CONSTANT fixed AS NUMBER 
+	INITIALISE fixed TO .56
+	tc = p * fixed
+	RETURN tc
+END SUB
+
+	

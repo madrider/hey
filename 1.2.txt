@@ -1,0 +1,22 @@
+/************************************************************************************************
+ * File Name		:	tag colors.txt							*
+ * Author Name		:	Vijai Chandra Prasad						*
+ * Description		:	Pseudocode to identify tag color based on experience		*
+ * Version		:	1.0								*
+ * last Modified Date	:	27/07/2017							*
+ * Change Description	:	Initial code							*
+ ************************************************************************************************/ 
+BEGIN
+	DECLARE exp AS INTEGER
+	INITIALIZE exp TO 0
+	PROMT "Enter the experience"
+	ACCEPT exp
+	IF exp >= 0 && exp < 3 THEN
+		PRINT "BLUE"
+	ELSE IF exp >= 3 && exp < 5 THEN
+		PRINT GREY
+	ELSE IF exp >= 5 && exP < 10 THEN
+		PRNT YELLOW
+	ELSE
+		PRINT RED
+END IF

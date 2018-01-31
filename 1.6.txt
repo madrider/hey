@@ -1,0 +1,59 @@
+/************************************************************************************************
+ * File Name		:	binary to decimal.txt						*
+ * Author Name		:	Vijai Chandra Prasad						*
+ * Description		:	Pseudocode to convert binary number to decimal number		*
+ * Version		:	1.0								*
+ * last Modified Date	:	27/07/2017							*
+ * Change Description	:	Initial code							*
+ ************************************************************************************************/ 
+
+BEGIN
+	DECLARE binnumber AS NUMBER
+	INITIALIZE binnumber TO 0000
+	PROMPT "Enter the binary number"
+	ACCEPT binnumber
+	decnum = convertBinToDec(binnumber)
+	PRINT decnum
+END
+
+
+/************************************************************************************************
+ * Module Name		:	convertBinToDec()						*
+ * Input Params		:	Number								*
+ * Return Type		:	Number								*
+ * Author Name		:	Vijai Chandra Prasad						*
+ * Description		:	Sub program to convert binary number to decimal number		*
+ * last Modified Date	:	27/07/2017							*
+ ************************************************************************************************/ 
+SUB convertBinToDec(binnumber)
+	DECLARE decnum AS NUMBER
+	DECLARE counter AS NUMBER
+	DECLARE remainder AS NUMBER
+	INITIALIZE decnum TO 0
+	INITIALIZE counter TO 0
+	INITIALIZE remainder TO 0
+	WHILE (binnumber != 0)
+		remainder = binnumber%10
+		binnumber /= 10
+		decnum += remainder+power(2,counter)
+		++counter
+	END WHILE
+	RETURN decnum
+END SUB
+
+/************************************************************************************************
+ * Module Name		:	power()								*
+ * Input Params		:	Number, Number							*
+ * Return Type		:	Number								*
+ * Author Name		:	Vijai Chandra Prasad						*
+ * Description		:	Sub program to calculate power of a number			*
+ * last Modified Date	:	27/07/2017							*
+ ************************************************************************************************/ 
+SUB power(base, power)
+	DECLARE result AS NUMBER
+	INITIALIZE result AS 1
+	FOR i = 1 TO power DO
+		result *= base
+	END FOR
+	RETURN result
+END SUB

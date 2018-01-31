@@ -1,0 +1,56 @@
+/************************************************************************************************
+ * File Name		:	EBBill.txt							*
+ * Author Name		:	Vijai Chandra Prasad						*
+ * Description		:	Pseudocode to calculate Electricity Bill			*
+ * Version		:	1.0								*
+ * last Modified Date	:	27/07/2017							*
+ * Change Description	:	Initial code							*
+ ************************************************************************************************/ 
+
+BEGIN
+	DECLARE uid AS STRING
+	DECLARE uname AS STRING
+	DECLARE lmreading AS NUMBER
+	DECLARE cmreading AS NUMBER
+	DECLARE unitConsumed AS FLOAT
+	DECLARE netAmt as FLOAT
+	INITIALIZE lmreading TO 0
+	INITIALIZE cmreading TO 0
+	INITIALIZE unitConsumed AS 0
+	INITIALIZE netAmt TO 0
+
+	PROMPT "Enter user id"
+	ACCEPT uid
+
+	PROMPT "User name"
+	ACCEPT uname
+
+	PROMPT "Last month reading"
+	ACCEPT lmreading
+
+	PROMPT "Current month reading"
+	ACCEPT cmreading
+
+	unitConsumed = lmreading - cmreading
+	netAmt = calculateAmout(unitConsumed)
+	
+	PRINT "User ID:", uid
+	PRINT "User Name:", uname
+	PRINT "Unit Consumed:". unitConsumed
+	PRINT "Net amount:", netAmt
+END
+
+/************************************************************************************************
+ * Module Name		:	calculateAmount()						*
+ * Input Params		:	Number								*
+ * Return Type		:	Number								*
+ * Author Name		:	Vijai Chandra Prasad						*
+ * Description		:	Sub program to calculate amount and return the result		*
+ * last Modified Date	:	27/07/2017							*
+ ************************************************************************************************/ 
+SUB calculateAmount(unitConsumed)
+	DECLARE CONSTANT unitPrice AS FLOAT AND STORE 1.15
+	DECLARE CONSTANT FixedRate AS INTEGER AND STORE 100
+	netAmt = (unitConsumed * unitPrice) + Fixedrate
+	RETURN netAmt
+END SUB

@@ -1,0 +1,15 @@
+/**************************************************************
+* File                      : 3.4
+* Author name               : Vijai Chandra Prasad
+* Desc                      : Analysis on the given Algorithm
+* Version                   : 1.0
+* Last modified date        : 28-07-2017
+**************************************************************/
+
+ 1 . What does the above algorithm compute?
+Sol.  sum of n numbers
+ 
+ 2 . What is the efficiency class of the given algorithm?
+Sol.   In case of time complexity, It is O(n)
+       In case pf space complxity, It is O(n)
+ 

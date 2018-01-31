@@ -1,0 +1,45 @@
+/*********************************************************************
+* File			: 3.6.txt
+* Author Name		: Vijai Chandra Prasad
+* Desc			: Program to sort the elements and search for the match in the same array 
+* Version		: 1.0
+* Last Modified Date	: 28-7-2017
+* Change Description	: Initial code
+*********************************************************************/
+BEGIN
+	DECLARE num[5] AS INTEGERARRAY;
+	DECLARE i,j,temp,search AS INTEGER
+	FOR i=0 TO 5
+		ACCEPT num[i] AND STORE IN num[i]
+	END FOR
+	PROMPT "Enter the search element"
+	ACCEPT search AND STORE IN search 
+	FOR i=0 TO 5
+		FOR j=0 TO 5
+			IF num[i]>num[j]
+				temp=num[i]
+				num[i]=num[j]
+				num[j]=temp
+			END IF
+		END FOR
+	END FOR
+	FOR i=0 TO 5
+		DECLARE low,high,mid AS INTEGER
+		INITIALISE low TO 1
+		INITIALISE high TO 5
+		WHILE search!=num[i] AND low<=high
+			mid=(low+high)/2
+				IF search<num[mid]
+					high=mid-1
+				ELSE IF search>num[mid]
+					low=mid+1
+				END IF
+		END WHILE
+		IF search==num[i]
+			PRINT "SEARCHED ELEMENT IS FOUND"
+		ELSE
+			PRINT "NOT FOUND"
+		END IF
+	END FOR
+						
+END

@@ -1,0 +1,30 @@
+/*********************************************************************
+* File : 1.4.txt
+* Author Name : Vijai Chandra Prasad
+* Desc : Program to check armstrong number 
+* Version : 1.0
+* Last Modified Date : 28-July-2017
+* Change Description : Initial Code
+*********************************************************************/
+
+BEGIN
+	DECLARE arms AS INTEGER
+	DECLARE check AS INTEGER AND INTIALISE AS 0
+	DECLARE remainder AS INTEGER AND INTIALISE AS 0
+	DECLARE sum AS INTEGER AND INTIALISE AS 0
+
+	ACCEPT arms
+	arms = check
+	
+	WHILE (check != 0)
+		remainder=check % 10
+		sum=sum + (remainder * remainder * remainder )
+		check = check / 10
+
+		IF sum==arms
+			PRINT "Given number is armstrong number"
+		ELSE
+			PRINT "Given number is not armstrong number"
+		END IF
+	END WHILE
+END

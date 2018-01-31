@@ -1,0 +1,39 @@
+/*********************************************************************
+* File			: 3.1.txt
+* Author Name		: Vijai Chandra Prasad
+* Desc			: Answers about algorithm given in question 
+* Version		: 1.0
+* Last Modified Date	: 29-July-2017
+* Change Description	: Initial
+*********************************************************************/
+
+1. What does this algorithm computes?
+
+   Ans. The algorithm is to compute the difference between the max and min element in the array
+
+
+
+2. What is its basic operation?
+
+   Ans. the basic operation is to create minimum and maximum variables.
+
+
+
+3. Check the no of times the basic operation is executed depends only on the size
+      of an input or on any other parameter.
+
+   Ans. It depends upon the number of terms given in an array.
+
+
+
+4. Set up a sum/recurrence, expressing the number of times the basic operation is
+      executed. 
+
+   Ans. It is executed n-1 times.
+
+
+
+5. What is the efficiency class of the given algorithm?
+   Ans. It has an average efficiency.
+
+
